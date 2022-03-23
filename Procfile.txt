@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath HKA HKA.wsgi
+web: gunicorn HKA.wsgi --log-file -
