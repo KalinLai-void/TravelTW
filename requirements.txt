@@ -1,6 +1,9 @@
 asgiref==3.5.0
+django-on-heroku==1.1.2
 backports.zoneinfo==0.2.1
 Django==4.0.3
 sqlparse==0.4.2
 tzdata==2022.1
 dj-config-url~=0.1.1
+gunicorn>=20.0.0
+requests>=2.22.0
