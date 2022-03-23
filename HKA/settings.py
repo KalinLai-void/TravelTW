@@ -138,4 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'DATABASE_URL' in os.environ:
     # Configure Django for DATABASE_URL environment variable.
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+    DATABASES['default'] = dj_database_url.config()
