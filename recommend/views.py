@@ -35,8 +35,6 @@ def home_page(request, keyword, region):
             pass
     if r is not None:
         content = dict()
-        print('r:', r)
-        print('re:', region)
         if region == '所有縣市' or r == '所有縣市':
             hotel_list = Hotel.objects.filter(hotel_name__contains=k)
             attraction_list = Attraction.objects.filter(attraction_name__contains=k)
@@ -122,8 +120,6 @@ def auto_schedule(request, region, days, schedule_per_day, radius):
         step = int(len(ss) / days)
         for i in range(0, len(ss), step):
             sss.append(ss[i: i+step])
-            print(len(ss[i: i+step]))
-        print(sss)
 
 
         def to_url(d):

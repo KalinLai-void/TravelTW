@@ -33,7 +33,7 @@
 	<header class="header-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-3">
+				<div class="col-lg-6 col-md-3">
 					<div class="site-logo">
                         <a href="{% url 'home' %}"><img src="../static/img/logo.png" alt=""></a>
 					</div>
@@ -41,13 +41,12 @@
 						<i class="fa fa-bars"></i>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-3"></div>
 				<div class="col-lg-6 col-md-6">
-					<a href="#" class="site-btn header-btn">一鍵排程</a>
 					<nav class="main-menu">
 						<ul>
 							<li><a href="{% url 'home' %}">首頁</a></li>
 							<li><a href="{% url 'about' %}">關於我們</a></li>
+                            <li><a href="#" class="site-btn header-btn">一鍵排程</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -96,11 +95,13 @@
 								</select>
 								<input name="days" type="text" placeholder="預計天數">
 							</div>
-							<div class="text-white points-per-day">期望一天跑幾個行程？
+							<div class="text-white points-per-day">
+                                期望一天跑幾個行程？
 								<input type="range" name="max-points-per-day" min="1" max="15" value="5" oninput="this.nextElementSibling.value = this.value">
 								<output>5</output>&nbsp個
 							</div>
-							<div class="text-white range-of-activity">活動範圍(km)：
+							<div class="text-white range-of-activity">
+                                活動範圍(km)：
 								<input type="range" name="range-of-activity" min="1" max="50" value="10" oninput="this.nextElementSibling.value = this.value">
 								<output>10</output>&nbsp;km
 							</div>	
