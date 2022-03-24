@@ -61,6 +61,9 @@ def home_page(request, keyword, region):
             content['food'] = food_list[MAX_DATA_PER_PAGE * (page - 1):MAX_DATA_PER_PAGE * page - len(food_list)]
 
         total_page = (len(hotel_list) + len(attraction_list) + len(food_list)) // 24 + 1
+        if page > total_page:
+            page = total_page
+
         content['page'] = str(f'{page}/{total_page}')
 
         return render(request, 'index.html', content)
