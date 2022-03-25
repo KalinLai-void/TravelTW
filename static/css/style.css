@@ -345,7 +345,7 @@ a
 
 .intro-newslatter input[name=keyword][type=text] {
 	height: 53px;
-	width: 98%;
+	width: 80%;
 	padding: 0 30px;
 	margin-left: 22px;
 	margin-right: 22px;
@@ -387,6 +387,8 @@ a
 	float: right;
 	min-width: 25%;
 	min-height: 50px;
+	margin-left: 22px;
+	margin-right: 22px;
 }
 
 .intro-newslatter .site-btn:hover {

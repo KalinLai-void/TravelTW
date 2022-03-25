@@ -84,6 +84,7 @@ WSGI_APPLICATION = 'HKA.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# Local
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -91,7 +92,18 @@ DATABASES = {
     }
 }
 
-
+# Heroku
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddq8nkijc3bb02',
+        'USER': 'baqassjqkxjmwx',
+        'PASSWORD': 'a53fa1ef378b882d8e50f0f72e18df6e45849f4b268ec616a741a81e00a148f8',
+        'HOST': 'nkustcsie2022.herokuapp.com',
+        'PORT': '5432',
+    }
+}
+'''
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
