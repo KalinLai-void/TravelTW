@@ -291,6 +291,7 @@ a
 .main-menu ul {
 	list-style: none;
 	float: right;
+	height: 50px;
 }
 
 .main-menu ul li {
