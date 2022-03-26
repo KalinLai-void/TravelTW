@@ -306,12 +306,12 @@ a
 	color: #fff;
 	margin-left: 45px;
 	font-weight: 600;
-	padding: 15px 0 5px;
+	padding: 12px 0 5px;
 }
 
 .main-menu ul li a:hover {
 	font-size: 18px;
-	padding: 12px 0 5px;
+	padding: 10px 0 5px;
 	color: #69d984;
 }
 
@@ -468,7 +468,7 @@ a
 	padding: 20px;
 	background: #e7e7e7;
 	border-radius: 5px;
-	width: 40%;
+	width: 60%;
 	height: 85%;
 	position: relative;
 	transition: all 5s ease-in-out;
@@ -654,6 +654,17 @@ a
 
 .author-info .name {
 	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.author-info .github,
+.author-info .blog {
+	text-decoration:underline;
+	margin-bottom: 5px;
+}
+
+.author-info i {
+	margin-right: 5px;
 }
 
 /*------------------
