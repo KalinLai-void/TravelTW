@@ -74,10 +74,14 @@ def home_page(request, keyword, region):
 @csrf_exempt
 def auto_schedule(request, region, days, schedule_per_day, radius):
     if request.POST:
-        region = request.POST['region']
-        days = int(request.POST['days'])
-        schedule_per_day = int(request.POST['max-points-per-day'])
-        radius = float(request.POST['range-of-activity'])
+        try:
+            region = request.POST['region']
+            days = int(request.POST['days'])
+            schedule_per_day = int(request.POST['max-points-per-day'])
+            radius = float(request.POST['range-of-activity'])
+        except:
+            return render(request, 'schedule.html', {"days_error": True})
+
 
         if region == "隨機縣市":
             region = ALL_REGIONS[random.randrange(0, len(ALL_REGIONS))]
@@ -101,7 +105,7 @@ def auto_schedule(request, region, days, schedule_per_day, radius):
             except ValueError:
                 radius += 1
             if radius >= 500:
-                return render(request, 'schedule.html', {"error": True})
+                return render(request, 'schedule.html', {"no_found_error": True})
 
         food_list = Food.objects.filter(food_region=region)
         while True:
@@ -114,7 +118,7 @@ def auto_schedule(request, region, days, schedule_per_day, radius):
             except ValueError:
                 radius += 1
             if radius >= 500:
-                return render(request, 'schedule.html', {"error": True})
+                return render(request, 'schedule.html', {"no_found_error": True})
 
         s = [center_hotel] + choice_food_list + choice_attraction_list
         ss = choice_food_list + choice_attraction_list
