@@ -1,6 +1,7 @@
-venv/
-*.pyc
-__pycache__/
-db.sqlite3
 .idea/
-.gitignore
+__pycache__/
+venv/
+
+*.pyc
+
+db.sqlite3
