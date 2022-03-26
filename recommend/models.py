@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Hotel(models.Model):
     hotel_name = models.CharField(max_length=50)
-    hotel_description = models.CharField(max_length=300)
+    hotel_description = models.CharField(max_length=1000)
     hotel_address = models.CharField(max_length=50)
     hotel_region = models.CharField(max_length=10)
     hotel_town = models.CharField(max_length=10)
@@ -19,7 +19,7 @@ class Hotel(models.Model):
 
 class Attraction(models.Model):
     attraction_name = models.CharField(max_length=50)
-    attraction_description = models.CharField(max_length=300)
+    attraction_description = models.CharField(max_length=1000)
     attraction_open_time = models.CharField(max_length=100)
     attraction_address = models.CharField(max_length=50)
     attraction_region = models.CharField(max_length=10)
@@ -35,7 +35,7 @@ class Attraction(models.Model):
 
 class Food(models.Model):
     food_name = models.CharField(max_length=50)
-    food_description = models.CharField(max_length=300)
+    food_description = models.CharField(max_length=1000)
     food_open_time = models.CharField(max_length=100)
     food_address = models.CharField(max_length=50)
     food_region = models.CharField(max_length=10)
