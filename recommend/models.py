@@ -20,7 +20,7 @@ class Hotel(models.Model):
 class Attraction(models.Model):
     attraction_name = models.CharField(max_length=50)
     attraction_description = models.CharField(max_length=3000)
-    attraction_open_time = models.CharField(max_length=150)
+    attraction_open_time = models.CharField(max_length=500)
     attraction_address = models.CharField(max_length=80)
     attraction_region = models.CharField(max_length=20)
     attraction_town = models.CharField(max_length=20)
@@ -36,7 +36,7 @@ class Attraction(models.Model):
 class Food(models.Model):
     food_name = models.CharField(max_length=50)
     food_description = models.CharField(max_length=3000)
-    food_open_time = models.CharField(max_length=100)
+    food_open_time = models.CharField(max_length=500)
     food_address = models.CharField(max_length=150)
     food_region = models.CharField(max_length=20)
     food_town = models.CharField(max_length=20)
