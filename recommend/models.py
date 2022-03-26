@@ -9,7 +9,7 @@ class Hotel(models.Model):
     hotel_region = models.CharField(max_length=20)
     hotel_town = models.CharField(max_length=20)
     hotel_tel = models.CharField(max_length=40)
-    hotel_pic = models.CharField(max_length=100)
+    hotel_pic = models.CharField(max_length=200)
     hotel_px = models.FloatField()
     hotel_py = models.FloatField()
 
@@ -25,7 +25,7 @@ class Attraction(models.Model):
     attraction_region = models.CharField(max_length=20)
     attraction_town = models.CharField(max_length=20)
     attraction_tel = models.CharField(max_length=40)
-    attraction_pic = models.CharField(max_length=100)
+    attraction_pic = models.CharField(max_length=200)
     attraction_px = models.FloatField()
     attraction_py = models.FloatField()
 
@@ -41,7 +41,7 @@ class Food(models.Model):
     food_region = models.CharField(max_length=20)
     food_town = models.CharField(max_length=20)
     food_tel = models.CharField(max_length=40)
-    food_pic = models.CharField(max_length=100)
+    food_pic = models.CharField(max_length=200)
     food_px = models.FloatField()
     food_py = models.FloatField()
 
